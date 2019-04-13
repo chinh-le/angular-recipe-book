@@ -1,0 +1,16 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-recipe-start',
+  templateUrl: './recipe-start.component.html',
+  styleUrls: ['./recipe-start.component.sass']
+})
+export class RecipeStartComponent implements OnInit {
+  msg: string = 'Please select a recipe!!!';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

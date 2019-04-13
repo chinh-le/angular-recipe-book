@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-10">
+    <h2>Shopping List</h2>
+    <!-- <app-shopping-edit></app-shopping-edit> -->
+    <hr>
+    <ul class="list-group" *ngIf="ingredients.length > 0; else infoText">
+      <li class="list-group-item" *ngFor="let ingredient of ingredients; let i = index">
+        <a style="cursor: pointer" (click)="onEditItem(i)">{{ ingredient.name }} ({{ ingredient.amount }})</a>
+      </li>
+    </ul>
+    <ng-template #infoText>
+      Please add ingredient to the list!
+    </ng-template>
+  </div>
+</div>
