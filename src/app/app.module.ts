@@ -10,7 +10,7 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AppRoutingModule } from './app-routing.module';
 // import { RecipesModule } from './recipes/recipes.module';
 // import { SharedModule } from './shared/shared.module';
-
+// TODO this is a todo test
 // moved to CoreModule
 // import { HeaderComponent} from './header/header.component';
 // import { HomeComponent } from './home/home.component';
