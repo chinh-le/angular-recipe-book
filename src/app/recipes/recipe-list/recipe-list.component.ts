@@ -15,7 +15,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   recipes: Recipe[] = [];
   private recipeschangedSubscription: Subscription;
 
-  constructor(private recipeService: RecipeService, private router: Router, private route: ActivatedRoute, private dataStorageService: DataStorageService) {}
+  constructor(private recipeService: RecipeService, private router: Router, private route: ActivatedRoute, private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
     this.recipeschangedSubscription = this.recipeService.recipesChanged.subscribe(
@@ -24,7 +24,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
       }
     );
 
-    // TODO: response to get the auth token (AuthService.autoAuth()) arrives after than RecipeListComponent's init, when accessing recipes route directly, hence using the local recipes instead. This requires a thinkover of how to get auth token before loading recipes route
+    // TODO - response to get the auth token (AuthService.autoAuth()) arrives after than RecipeListComponent's init, when accessing recipes route directly, hence using the local recipes instead. This requires a thinkover of how to get auth token before loading recipes route
     if (this.dataStorageService.getLocalToken()) {
       this.dataStorageService.getRecipes()
         .subscribe(
@@ -60,11 +60,11 @@ export class RecipeListComponent implements OnInit, OnDestroy {
           // this.recipes = recipes;
         }
       ); */
-      
+
   }
 
   onNewRecipe() {
-    this.router.navigate(['new'], {relativeTo: this.route});
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 
   ngOnDestroy() {

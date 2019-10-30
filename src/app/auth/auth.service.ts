@@ -7,7 +7,7 @@ import { DataStorageService } from '../shared/data-storage.service';
 export class AuthService {
     private idToken: string = null;
 
-    constructor(private router: Router, private dataStorageService: DataStorageService) {}
+    constructor(private router: Router, private dataStorageService: DataStorageService) { }
 
     setToken(token: string) {
         this.idToken = token;
@@ -15,7 +15,7 @@ export class AuthService {
     getToken() {
         return this.idToken;
     }
-    // TODO: setting up the token needs to happen firstmost, before proceeding further in the app, specifically when accesing a route directly (eg: /recipes)
+    // TODO - setting up the token needs to happen firstmost, before proceeding further in the app, specifically when accesing a route directly (eg: /recipes)
     autoAuth() {
         firebase.auth().onAuthStateChanged(
             (user) => {

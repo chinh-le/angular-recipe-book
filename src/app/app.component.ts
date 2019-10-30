@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
 import { AuthService } from './auth/auth.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // config can be found at: https://console.firebase.google.com/project/ng7-recipe-book-d5358/authentication/users - Web setup
+    // https://console.firebase.google.com/project/ng7-recipe-book-d5358/settings/general/ - Project Settings Page
     firebase.initializeApp({
-      apiKey: "AIzaSyB64AyozKg7IsuhKaaZ1rjMqtupQIoRTSE",
+      apiKey: environment.firebaseAPIKey,
       authDomain: "ng7-recipe-book-d5358.firebaseapp.com"
     });
 
