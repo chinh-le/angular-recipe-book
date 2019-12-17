@@ -19,12 +19,12 @@ export class AuthService {
     autoAuth() {
         firebase.auth().onAuthStateChanged(
             (user) => {
-                // console.log(user);
+				// console.log('TLC: AuthService -> autoAuth -> user', user);
                 if (user) {
                     firebase.auth().currentUser.getIdToken()
                         .then(
                             (token) => {
-                                console.log('autoAuth()');
+                                // console.log('autoAuth()');
                                 this.idToken = token;
                                 this.dataStorageService.setToken(token);
                                 // this.dataStorageService.getRecipes();
@@ -32,7 +32,7 @@ export class AuthService {
                         )
                 } else {
                     this.idToken = null;
-                    console.warn('Not Logged!');
+					// console.log('TLC: AuthService -> autoAuth -> Not Logged!');
                 }
             }
         );
@@ -47,6 +47,7 @@ export class AuthService {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
                 (response) => {
+					// // console.log('TLC: AuthService -> signinUser -> response', response);
                     // redirect to recipes page once logged
                     this.router.navigate(['/']);
 

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prj-the-basics": {
+    "recipe-book-ng": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/prj-the-basics",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "prj-the-basics:build"
+            "browserTarget": "recipe-book-ng:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "prj-the-basics:build:production"
+              "browserTarget": "recipe-book-ng:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "prj-the-basics:build"
+            "browserTarget": "recipe-book-ng:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "prj-the-basics-e2e": {
+    "recipe-book-ng-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "prj-the-basics:serve"
+            "devServerTarget": "recipe-book-ng:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "prj-the-basics:serve:production"
+              "devServerTarget": "recipe-book-ng:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "prj-the-basics"
+  "defaultProject": "recipe-book-ng"
 }

@@ -9,23 +9,22 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit {
-  private title = 'prj-the-basics';
+  private title = 'recipe-book-ng';
 
   constructor(private authService: AuthService) {
     // console.log('app constructor called!');
   }
 
   ngOnInit() {
-    // https://console.firebase.google.com/project/ng7-recipe-book-d5358/settings/general/ - Project Settings Page
     firebase.initializeApp({
-      apiKey: environment.firebaseAPIKey,
-      authDomain: "ng7-recipe-book-d5358.firebaseapp.com"
+      apiKey: environment.googleFirebaseApiKey
+      // authDomain: "recipe-book-ng-183d5.firebaseapp.com"
     });
 
     this.authService.autoAuth();
   }
-
+/* 
   onClick() {
     console.log(this.authService.getToken());
-  }
+  } */
 }

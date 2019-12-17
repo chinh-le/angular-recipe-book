@@ -8,7 +8,7 @@ export class AuthGuard implements CanActivate, CanLoad {
     constructor(private authService: AuthService, private router: Router) {}
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-        console.warn(route._routerState.url, ': route protected - canActivate Interface');
+        // console.warn(route.url, ': route protected - canActivate Interface');
         if (this.authService.isAuthenticated()) {
             return true;
         } else {
@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate, CanLoad {
     }
 
     canLoad(route: Route, segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
-        console.warn(route.path, ': lazy loading route protected - canLoad Interface');
+        // console.warn(route.path, ': lazy loading route protected - canLoad Interface');
         if (this.authService.isAuthenticated()) {
             return true;
         } else {
