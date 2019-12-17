@@ -39,6 +39,13 @@ yarn-error.log
 testem.log
 /typings
 
+# Web Services - Firebase
+./firebase
+
+# Node process environment variables using ng-node-environment module
+.env*
+**/base.ts
+
 # System Files
 .DS_Store
 Thumbs.db
