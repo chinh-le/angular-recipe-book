@@ -9,7 +9,7 @@ import * as firebase from 'firebase';
 
 @Injectable()
 export class DataStorageService {
-    private urlDB: string = 'https://recipe-book-ng-183d5.firebaseio.com/recipe-book-ng-183d5'; //Firebase
+    private urlDB: string = 'https://recipe-book-ng-183d5.firebaseio.com/recipes'; //Firebase
     private token: string = null;
 
     constructor(private http: Http, private recipeService: RecipeService) {}
@@ -30,7 +30,7 @@ export class DataStorageService {
             return this.http.get(this.urlDB + '?auth=' + this.token)
                 .map(
                     (response: Response) => {
-						console.log('TLC: DataStorageService -> getRecipes -> response', response);
+						// console.log('TLC: DataStorageService -> getRecipes -> response', response);
                         const recipes: Recipe[] = response.json();
                         for (let recipe of recipes) {
                             if (!recipe['ingredients']) {
@@ -41,7 +41,7 @@ export class DataStorageService {
                     })
                 .catch(
                     (err: Response) => {
-						console.log('TLC: DataStorageService -> getRecipes -> err', err);
+						// console.log('TLC: DataStorageService -> getRecipes -> err', err);
                         return Observable.throw(err.json());
                     });/* 
                 .subscribe(
