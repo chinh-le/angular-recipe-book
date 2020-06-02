@@ -27,7 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
     // HomeComponent //moved to CoreModule
   ],
   imports: [
-    BrowserModule, //contains CommonModule and some additional features which are only needed at the app starts. Therefore BrowserModule is and should only used in the AppModule. CommunModule is recommended to be used in all other Modules.
+    BrowserModule, //contains CommonModule and some additional features which are only needed at the app starts. Therefore BrowserModule is and should only used in the AppModule. CommonModule is recommended to be used in all other Modules.
     // ReactiveFormsModule, //should be moved to RecipesModule since it's only used in RecipeEdit
     HttpModule,
     CoreModule,
