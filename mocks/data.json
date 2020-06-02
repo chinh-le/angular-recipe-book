@@ -1,0 +1,36 @@
+{
+  "recipes": [ {
+    "description" : "Summer, dish, meal, food, ...",
+    "imagePath" : "https://c.pxhere.com/photos/5c/09/spare_ribs_grill_bbq_barbecue_peeling_ribs_meat_pork_flame-863379.jpg!d",
+    "ingredients" : [ {
+      "amount" : 1,
+      "name" : "Pork chop"
+    }, {
+      "amount" : 2,
+      "name" : "Tomato"
+    } ],
+    "name" : "Grilled Pork Chop"
+  }, {
+    "description" : "Sea, white, restaurant, dish, meal,...",
+    "imagePath" : "https://c.pxhere.com/photos/b2/84/fish_food_recipe_restaurant_lunch_meal_delicious_plate-1294390.jpg!d",
+    "ingredients" : [ {
+      "amount" : 1,
+      "name" : "Fish Filet"
+    }, {
+      "amount" : 1,
+      "name" : "Cucumber"
+    } ],
+    "name" : "Fried Fish Filet"
+  }, {
+    "description" : "Leaf, restaurant, summer, orange, dish,...",
+    "imagePath" : "https://c.pxhere.com/photos/80/3f/appetite_barbecue_barbeque_bbq_catering_chicken_chips_colorful-819587.jpg!d",
+    "ingredients" : [ {
+      "amount" : 1,
+      "name" : "Chicken Filet"
+    }, {
+      "amount" : 2,
+      "name" : "French Fries"
+    } ],
+    "name" : "Spicy Chicken Steak Frites"
+  } ]
+}

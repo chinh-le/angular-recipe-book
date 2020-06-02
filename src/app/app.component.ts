@@ -12,13 +12,11 @@ export class AppComponent implements OnInit {
   private title = 'recipe-book-ng';
 
   constructor(private authService: AuthService) {
-    // console.log('app constructor called!');
   }
 
   ngOnInit() {
     firebase.initializeApp({
       apiKey: environment.googleFirebaseApiKey
-      // authDomain: "recipe-book-ng-183d5.firebaseapp.com"
     });
 
     this.authService.autoAuth();
